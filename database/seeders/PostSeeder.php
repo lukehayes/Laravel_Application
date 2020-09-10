@@ -13,6 +13,9 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('post')->insert([
+            'title' => Str::random(10),
+            'content' => Str::random(50)
+        ]);
     }
 }
