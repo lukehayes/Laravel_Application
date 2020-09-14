@@ -18,5 +18,11 @@ class Post extends Model
         'title', 'content',
     ];
 
+    /**
+     * Automatically fill in the created_at and 
+     * updated_at fields of this model.
+     *
+     * @var array
+     */
     public $timestamps = true;
 }
