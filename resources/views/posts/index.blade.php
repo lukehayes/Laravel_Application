@@ -3,10 +3,6 @@
 @section('main')
 <p>All Posts:</p>
 
-<table>
-    
-</table>
-
 @foreach($posts as $post)
     <div>
         <h3>{{ $post->title }}</h3>
