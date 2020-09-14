@@ -17,6 +17,13 @@
         </style>
     </head>
 
+    <header>
+        <nav>
+            <a href="{{route('home')}}">Home</a>
+            <a href="{{route('post.create')}}">New Post</a>
+        </nav>
+    </header>
+
     <body class="antialiased">
         @yield('main')
     </body>
