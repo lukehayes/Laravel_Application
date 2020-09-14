@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -36,7 +36,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+
+        $post->title = $request->title;
+        $post->content = $request->content;
+
+        if ($post->save()) 
+        {
+            return redirect()->route('home')->with('status', 'New Post Created!');
+        }
+
     }
 
     /**
@@ -58,7 +67,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', ['post' => $post]);
     }
 
     /**
@@ -71,6 +80,8 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+        
+        dump($request);
     }
 
     /**
@@ -81,6 +92,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        if($post->delete())
+        {
+            return redirect()->route('home')->with('status', 'Post Deleted!');
+        } else {
+            return redirect()->route('home')->with('status', 'Post Deletion has failed.');
+        }
     }
 }
