@@ -17,3 +17,4 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::resource('post', PostController::class);
+Route::get('/post/destroy/{post}', [PostController::class, 'destroy'])->name('post.destroy');
