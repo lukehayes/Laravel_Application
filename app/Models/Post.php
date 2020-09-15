@@ -25,4 +25,9 @@ class Post extends Model
      * @var array
      */
     public $timestamps = true;
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
 }
