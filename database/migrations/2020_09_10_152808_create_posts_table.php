@@ -18,6 +18,8 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('title', 100);
             $table->text('content');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
