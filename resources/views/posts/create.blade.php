@@ -16,6 +16,7 @@
 <form action="{{route('post.store')}}" method="post">
     @csrf
 
+
     <div class="form-group">
 
          <label for="post-title">Post Title</label>
@@ -26,6 +27,14 @@
     <div class="form-group">
         <label for="post-content">Post Content</label>
         <textarea class="form-control" name="content" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        <select name="category" class="custom-select" required>
+            @foreach($categories as $c)
+                <option value="{{$c->category}}">{{$c->category}}</option>
+            @endforeach()
+        </select>
     </div>
 
     <input type="submit" value="Create New Post" class="btn btn-primary">
