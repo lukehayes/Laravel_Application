@@ -23,23 +23,21 @@
 
     </head>
 
-
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 mb-2">
-                <header>
-                    <nav>
-                        <a href="{{route('home')}}">Home</a>
-                        <a href="{{route('post.create')}}">New Post</a>
-                    </nav>
-                </header>
-            </div>
+        <div class="columns">
+            <header>
+                <nav>
+                    <a href="{{route('home')}}">Home</a>
+                    <a href="{{route('post.create')}}">New Post</a>
+                </nav>
+            </header>
         </div>
     </div>
 
-
     <body class="antialiased">
-        @yield('main')
+        @section('main')
+        @show
+            
     </body>
 
 </html>
