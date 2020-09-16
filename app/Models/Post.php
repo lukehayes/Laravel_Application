@@ -26,6 +26,9 @@ class Post extends Model
      */
     public $timestamps = true;
 
+    /**
+     * Define the one to many relationship
+     */
     public function category()
     {
         return $this->belongsTo('App\Models\Category');
