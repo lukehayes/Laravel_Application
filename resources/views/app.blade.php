@@ -7,24 +7,13 @@
 
         <title>Application</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
         <!-- Bulma -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" >
 
-
-        <!-- Styles -->
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
-
     </head>
 
-    <div class="container">
-        <div class="columns">
+    <div class="section">
+        <div class="container">
             <header>
                 <nav>
                     <a href="{{route('home')}}">Home</a>
