@@ -4,16 +4,16 @@
 @section('main')
 
 <div class="section">
-    <div class="columns is-centered is-tablet">
+    <div class="columns is-centered">
         <div class="column is-8">
-            <h3>Create a new post:</h3>
+            <h3 class="title is-5">Create a new post:</h3>
         </div>
     </div>
 </div>
 
 <div class="section">
-    <div class="columns is-centered">
-        <div class="column is-8 is-hcentered ">
+    <div class="columns is-centered is-variable is-1-desktop">
+        <div class="column is-8">
 
             <form action="{{route('post.store')}}" method="post">
                 @csrf
