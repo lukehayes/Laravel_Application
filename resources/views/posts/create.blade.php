@@ -1,45 +1,56 @@
 @extends('app')
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 m4">
+<div class="section">
+    <div class="columns">
+        <div class="column">
             <h3>Create a new post:</h3>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<div class="section">
+    <div class="columns">
+        <div class="column is-8 is-hcentered ">
 
+            <form action="{{route('post.store')}}" method="post">
+                @csrf
 
-<form action="{{route('post.store')}}" method="post">
-    @csrf
+                <div class="field">
+                    <label class="label" for="post-title">Post Title:</label>
+                    <div class="control">
+                        <input type="text" name="title" class="input" value="" placeholder="New Post Title">
+                    </div>
+                </div>
 
+                <div class="field">
+                    <label class="label" for="post-content">Post Content:</label>
+                    <div class="control">
+                        <textarea class="textarea" name="content" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
 
-    <div class="form-group">
+                <div class="field">
+                    <label class="label" for="category">Programming Language:</label>
 
-         <label for="post-title">Post Title</label>
-        <input type="text" name="title" class="form-control" value="" placeholder="New Post Title">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    
-    <div class="form-group">
-        <label for="post-content">Post Content</label>
-        <textarea class="form-control" name="content" cols="30" rows="10"></textarea>
-    </div>
+                    <div class="control">
+                        <div class="select">
+                            <select name="category" class="input" required>
+                                @foreach($categories as $c)
+                                <option value="{{$c->category}}">{{$c->category}}</option>
+                                @endforeach()
+                            </select>
+                        </div>
+                    </div>
 
-    <div class="form-group">
-        <select name="category" class="custom-select" required>
-            @foreach($categories as $c)
-                <option value="{{$c->category}}">{{$c->category}}</option>
-            @endforeach()
-        </select>
-    </div>
+                </div>
 
-    <input type="submit" value="Create New Post" class="btn btn-primary">
-    
-</form>
+                <div class="field">
+                    <div class="control">
+                        <button type="submit" class="button is-link is-light">Create Post</button>
+                    </div>
+                </div>
+
+            </form>
 
         </div>
     </div>
