@@ -1,20 +1,22 @@
 @extends('app')
 
+
+@section('main')
+
 <div class="section">
-    <div class="columns">
-        <div class="column">
+    <div class="columns is-centered is-tablet">
+        <div class="column is-8">
             <h3>Create a new post:</h3>
         </div>
     </div>
 </div>
 
 <div class="section">
-    <div class="columns">
+    <div class="columns is-centered">
         <div class="column is-8 is-hcentered ">
 
             <form action="{{route('post.store')}}" method="post">
                 @csrf
-
                 <div class="field">
                     <label class="label" for="post-title">Post Title:</label>
                     <div class="control">
@@ -55,3 +57,4 @@
         </div>
     </div>
 </div>
+@endsection('main')
