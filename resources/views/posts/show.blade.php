@@ -1,9 +1,11 @@
 @extends('app')
 
+@section('main')
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="post">
+            <div class="post content">
                 <h3>{{ $post->title }}</h3>
                 <p>{{ $post->content }}</p>
                 <a href="{{route('post.edit', $post->id)}}" class="btn-sm btn-secondary">Edit this post.</a>
@@ -13,3 +15,4 @@
     </div>
 </div>
 
+@endsection('main')
