@@ -50,7 +50,6 @@ class PostController extends Controller
         {
             return redirect()->route('home')->with('status', 'New Post Created!');
         }
-
     }
 
     /**
@@ -84,9 +83,19 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
-        
-        dump($request);
+        $post = Post::find($post->id);
+
+        $post->title = $request->title;
+        $post->content = $request->content;
+
+        $cat = Category::where('category', $request->category)->first();
+
+        $post->category()->associate($cat);
+
+        if ($post->save()) 
+        {
+            return redirect()->route('home')->with('status', 'New Post Created!');
+        }
     }
 
     /**
