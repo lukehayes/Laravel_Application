@@ -12,7 +12,8 @@
     <div class="columns is-centered is-variable is-1-desktop">
         <div class="column is-8">
 
-            <form action="{{route('post.store')}}" method="post">
+            <form action="{{route('post.update', $post->id )}}" method="POST">
+                <input type="hidden" name="_method" value="PUT">
                 @csrf
                 <div class="field">
                     <label class="label" for="post-title">Post Title:</label>
