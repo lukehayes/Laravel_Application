@@ -19,7 +19,8 @@ class PostSeeder extends Seeder
         {
             DB::table('posts')->insert([
                 'title' => Str::random(),
-                'content' => Str::random(50)
+                'content' => Str::random(50),
+                'category_id' => rand(1,6)
             ]);
         }
 
