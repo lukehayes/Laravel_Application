@@ -27,9 +27,12 @@
             <h2 class="title"><a href="{{route('post.show', $post->id)}}">{{$post->title}}</a></h2>
             <p>{{ $post->content }}</p>
 
+
+@if($post->category)
 <div class="tags">
             <span class="tag is-link">{{$post->category->category}}</span>
 </div>
+@endif
 
 
 
