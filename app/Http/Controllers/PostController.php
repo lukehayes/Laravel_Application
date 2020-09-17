@@ -42,10 +42,15 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->content = $request->content;
 
-        if ($post->save()) 
-        {
-            return redirect()->route('home')->with('status', 'New Post Created!');
-        }
+        $cat = Category::where('category', $request->category)->first();
+
+        $post->category()->save($cat);
+
+
+        //if ($post->save()) 
+        //{
+            //return redirect()->route('home')->with('status', 'New Post Created!');
+        //}
 
     }
 
