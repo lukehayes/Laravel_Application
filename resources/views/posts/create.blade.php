@@ -9,9 +9,7 @@
             <h3 class="title is-5">Create a new post:</h3>
         </div>
     </div>
-</div>
 
-<div class="section">
     <div class="columns is-centered is-variable is-1-desktop">
         <div class="column is-8">
 
