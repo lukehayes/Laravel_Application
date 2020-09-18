@@ -2,17 +2,6 @@
 
 @section('main')
 
-<div class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <p>All Posts:</p>
-            </div> <!-- .column -->
-        </div> <!-- .columns -->
-    </div> <!-- .container -->
-</div> <!-- .section -->
-
-
 @if (session('status'))
 <div class="container">
     <div class="notification">
