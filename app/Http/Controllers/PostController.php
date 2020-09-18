@@ -37,6 +37,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $validationRules = $request->validate([
+            'title' => 'required|min:5',
+            'content' => 'required|min:5',
+        ]);
+
         $post = new Post;
 
         $post->title = $request->title;
@@ -83,6 +88,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        $validationRules = $request->validate([
+            'title' => 'required|min:5',
+            'content' => 'required|min:5',
+        ]);
+
         $post = Post::find($post->id);
 
         $post->title = $request->title;

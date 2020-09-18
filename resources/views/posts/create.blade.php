@@ -3,6 +3,15 @@
 
 @section('main')
 
+
+@if($errors->any())
+<div class="container">
+    @foreach ($errors->all() as $error)
+        <div class="message is-danger">{{ $error }}</div>
+    @endforeach
+</div>
+@endif
+
 <div class="section">
     <div class="columns is-centered">
         <div class="column is-8">
