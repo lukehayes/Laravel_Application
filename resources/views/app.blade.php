@@ -9,11 +9,11 @@
 
         <!-- Bulma -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" >
-
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
     </head>
 
-    <div class="section">
-        <div class="container">
+    <div class="container">
+        <div class="section">
             <header>
                 <nav>
                     <a href="{{route('home')}}">Home</a>
