@@ -27,6 +27,6 @@
         @section('main')
         @show
             
+        <script charset="utf-8" src="{{ mix('js/app.js') }}"></script>
     </body>
-
 </html>
