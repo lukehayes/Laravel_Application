@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LoginController;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::resource('post', PostController::class);
 Route::get('/post/destroy/{post}', [PostController::class, 'destroy'])->name('post.destroy');
+
+Route::get("/login", [LoginController::class, 'index']);
+Route::post("/login", [LoginController::class, 'authenticate'])->name('login');
