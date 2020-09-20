@@ -1,5 +1,7 @@
 @extends('app')
 
+
+@section('main')
 <div class="section">
     <div class="container">
         <div class="columns is-centered">
@@ -29,4 +31,4 @@
         </div>
     </div>
 </div>
-
+@endsection('main')
