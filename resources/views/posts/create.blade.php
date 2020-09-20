@@ -1,8 +1,6 @@
-@extends('app')
-
+@extends('layouts.app')
 
 @section('main')
-
 
 @if($errors->any())
 <div class="container">
