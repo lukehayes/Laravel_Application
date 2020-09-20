@@ -10,8 +10,11 @@
         <!-- Bulma -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" >
         <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+
     </head>
 
+    @if(! Request::is('login'))
     <div class="container">
         <div class="section">
             <header>
@@ -22,11 +25,17 @@
             </header>
         </div>
     </div>
+    @endif
 
     <body class="antialiased">
+
         @section('main')
-        @show
-            
+            @show
+
+        @if(Request::is('login'))
+            @yield('login')
+        @endif
+
         <script charset="utf-8" src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
