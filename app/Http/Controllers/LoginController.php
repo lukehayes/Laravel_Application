@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         $validationRules = $request->validate([
             'email' => 'required|min:5',
-            'password' => 'required|min:5',
+            'password' => 'required|min:4'
         ]);
 
         if(Auth::attempt($credentials))
