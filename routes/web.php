@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::resource('post', PostController::class);
@@ -22,3 +23,5 @@ Route::get('/post/destroy/{post}', [PostController::class, 'destroy'])->name('po
 
 Route::get("/login", [LoginController::class, 'index']);
 Route::post("/login", [LoginController::class, 'authenticate'])->name('login');
+
+Route::get("/dashboard", [DashboardController::class, 'index']);
