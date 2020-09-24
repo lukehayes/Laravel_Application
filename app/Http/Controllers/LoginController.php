@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials))
         {
-            return redirect()->route('post.index');
+            return redirect('dashboard');
         }
     }
 }
