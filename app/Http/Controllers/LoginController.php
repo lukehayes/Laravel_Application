@@ -17,6 +17,11 @@ class LoginController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
+        $validationRules = $request->validate([
+            'email' => 'required|min:5',
+            'password' => 'required|min:5',
+        ]);
+
         if(Auth::attempt($credentials))
         {
             return redirect('dashboard');
