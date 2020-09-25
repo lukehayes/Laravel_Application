@@ -9,8 +9,8 @@
                 <div class="post content">
                     <h3>{{ $post->title }}</h3>
                     <p>{{ $post->content }}</p>
-                    <a href="{{route('post.edit', $post->id)}}" class="button">Edit this post.</a>
-                    <a href="{{route('post.destroy', $post->id)}}" class="button">Delete</a>
+                    <a href="{{route('post.edit', $post->id)}}" class="button is-small">Edit this post.</a>
+                    <a href="{{route('post.destroy', $post->id)}}" class="button is-small">Delete</a>
                 </div>
             </div>
         </div>
