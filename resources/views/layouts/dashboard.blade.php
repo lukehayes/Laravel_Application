@@ -13,7 +13,7 @@
 
     </head>
 
-    <body class="antialiased">
+    <body class="has-background-light">
 
         @section('main')
             @show
