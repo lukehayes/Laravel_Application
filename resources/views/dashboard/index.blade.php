@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <p>Dashboard</p>
+                <h4 class="title is-5">Dashboard</h4>
             </div>
         </div>
     </div>
